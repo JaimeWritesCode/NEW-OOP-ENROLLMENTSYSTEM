@@ -13,6 +13,8 @@ public class Main {
                 new DepartmentRegistrationImpl()
         );
 
+        System.out.println("Just branch fixing");
+
         List<Instructor> instructorList = new ArrayList<>();
         instructorList.add(new Instructor("3766", "John Doe", 30, new ArrayList<>(), new ArrayList<>()));
 
