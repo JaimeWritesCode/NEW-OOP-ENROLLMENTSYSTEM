@@ -1,4 +1,5 @@
 package org.example.model;
+import org.example.service.ICourseRegistration;
 
 public class Course {
     private String courseID;
@@ -15,27 +16,27 @@ public class Course {
         this.program = program;
     }
 
-    public String getcourseID(){
+    public String getCourseID(){
         return courseID;
     }
 
-    public void setcourseID(String courseID){
+    public void setCourseID(String courseID){
         this.courseID = courseID;
     }
 
-    public String getcourseName(){
+    public String getCourseName(){
         return courseName;
     }
 
-    public void setcourseName(String courseName){
+    public void setCourseName(String courseName){
         this.courseName = courseName;
     }
 
-    public String getprogram(){
+    public String getProgram(){
         return program;
     }
 
-    public void setprogram(String program){
+    public void setProgram(String program){
         this.program = program;
     }
 
@@ -53,4 +54,5 @@ public class Course {
                 ", program='" + program + '\'' +
                 '}';
     }
+
 }
