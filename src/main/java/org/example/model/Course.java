@@ -1,5 +1,5 @@
 package org.example.model;
-import org.example.service.ICourseRegistration;
+
 
 public class Course {
     private String courseID;
