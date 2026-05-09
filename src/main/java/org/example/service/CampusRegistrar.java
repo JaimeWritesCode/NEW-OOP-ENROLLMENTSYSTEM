@@ -6,24 +6,24 @@ import org.example.model.Student;
 import java.util.List;
 
 public class CampusRegistrar {
-    private StudentRegistration studentRegistration;
+    private IStudentService IStudentService;
     private InstructorReg instructorRegistration;
     private DepartmentReg departmentRegistration;
 
-    public CampusRegistrar(StudentRegistration s, InstructorReg i, DepartmentReg d) {
-        this.studentRegistration = s;
+    public CampusRegistrar(IStudentService s, InstructorReg i, DepartmentReg d) {
+        this.IStudentService = s;
         this.instructorRegistration = i;
         this.departmentRegistration = d;
     }
 
     // --- STUDENT METHODS ---
     public void saveStudent(Student s) {
-        studentRegistration.saveStudent(s);
+        IStudentService.saveStudent(s);
     }
 
     public void displayAllStudent() {
         // Calls the display method in StudentRegistrationImpl
-        studentRegistration.displayAllStudent();
+        IStudentService.displayAllStudent();
     }
 
     // --- INSTRUCTOR METHODS ---

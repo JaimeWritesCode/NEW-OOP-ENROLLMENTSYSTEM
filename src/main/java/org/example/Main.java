@@ -8,12 +8,10 @@ public class Main {
     public static void main(String[] args) {
         // Pass all three implementations
         CampusRegistrar campusRegistrar = new CampusRegistrar(
-                new StudentRegistrationImpl(),
+                new IStudentServiceImpl(),
                 new InstructorRegistrationImpl(),
                 new DepartmentRegistrationImpl()
         );
-
-        System.out.println("Just branch fixing");
 
         List<Instructor> instructorList = new ArrayList<>();
         instructorList.add(new Instructor("3766", "John Doe", 30, new ArrayList<>(), new ArrayList<>()));
