@@ -15,7 +15,7 @@ public class IStudentServiceImpl implements IStudentService {
     }
 
     @Override
-    public void getAllStudents() {
+    public void displayAllStudents() {
         System.out.println(students);
     }
 

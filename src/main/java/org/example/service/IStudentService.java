@@ -5,5 +5,5 @@ public interface IStudentService {
     void addStudent(Student student);
     void updateStudent(Student student);
     void removeStudent(String studentID);
-    void getAllStudents();
+    void displayAllStudents();
 }
