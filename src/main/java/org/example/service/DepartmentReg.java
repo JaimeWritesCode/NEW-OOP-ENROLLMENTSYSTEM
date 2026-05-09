@@ -1,12 +1,10 @@
 package org.example.service;
-import org.example.model.Department;
-import org.example.model.Instructor;
 
+import org.example.model.Department;
 import java.util.List;
 
 public interface DepartmentReg {
-    List<Department> displayAllDepartment();
-    void saveDepartment(Department department);
-    void updateCourse(Department department);
-    String removeCourse(Department department);
+    void addDepartment(Department department);
+    List<Department> getAllDepartments();
+    void viewDepartmentHierarchy(String departmentId);
 }

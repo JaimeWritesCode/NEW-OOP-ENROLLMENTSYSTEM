@@ -1,46 +1,28 @@
 package org.example.model;
 
 import java.util.List;
+import java.util.ArrayList;
 
 public class Department {
     private String id;
     private String departmentName;
-    private List<Instructor> instructorList;
+    private List<Section> sections;
 
-    public Department(String id, String departmentName, List<Instructor> instructorList) {
+    public Department(String id, String departmentName) {
         this.id = id;
         this.departmentName = departmentName;
-        this.instructorList = instructorList;
+        this.sections = new ArrayList<>();
     }
-
-    // --- GETTERS (The Fix for 'Cannot Find Symbol') ---
 
     public String getId() {
         return id;
     }
 
+    public List<Section> getSections() {
+        return sections;
+    }
+
     public String getDepartmentName() {
         return departmentName;
-    }
-
-    public List<Instructor> getInstructorList() {
-        return instructorList;
-    }
-
-    // --- TOSTRING ---
-
-    @Override
-    public String toString() {
-        StringBuilder sb = new StringBuilder();
-        // Check if list is null or empty to avoid errors
-        if (instructorList == null || instructorList.isEmpty()) {
-            return String.format("Dept ID: %s | Dept Name: %-15s | No Instructors assigned.%n", id, departmentName);
-        }
-
-        for (Instructor i : instructorList) {
-            sb.append(String.format("Dept ID: %s | Dept Name: %-15s | Instructor ID: %-10s | Instructor Name: %s%n",
-                    id, departmentName, i.getPersonID(), i.getName()));
-        }
-        return sb.toString();
     }
 }
