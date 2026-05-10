@@ -13,7 +13,6 @@ public abstract class DepartmentRegistrationService implements DepartmentReg {
         this.departments = new ArrayList<>();
     }
 
-
     @Override
     public abstract void viewDepartmentHierarchy(String departmentId);
 
