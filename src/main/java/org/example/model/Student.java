@@ -1,11 +1,11 @@
 package org.example.model;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Student extends Person {
 
-    @Override
-    public void mainTask() {
-        System.out.println("Main task: To go school and learn.");
-    }
+    private List<Section> enrolledSections;
 
     public Student() {
         this("Null", "Unknown", 0);
@@ -13,15 +13,27 @@ public class Student extends Person {
 
     public Student(String ID, String name, int age) {
         super(ID, name, age);
+        this.enrolledSections = new ArrayList<>();
     }
 
-    // Display methods
+    @Override
+    public void mainTask() {
+        System.out.println("Main task: To go school and learn.");
+    }
+
+    public String getStudentId() {
+        return super.getPersonID();
+    }
+
+    public List<Section> getEnrolledSections() {
+        return enrolledSections;
+    }
+
     public void displayID() {
-        System.out.println(super.getPersonID());
+        System.out.println("Student ID: " + super.getPersonID());
     }
 
     public void displayName() {
-        System.out.println(super.getName());
+        System.out.println("Student Name: " + super.getName());
     }
-
 }
