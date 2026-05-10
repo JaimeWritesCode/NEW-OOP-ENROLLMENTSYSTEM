@@ -11,6 +11,16 @@ public class Student extends Person {
         this("Null", "Unknown", 0);
     }
 
+    private double tuitionFee;
+
+    public void setTuitionFee(double tuitionFee) {
+        this.tuitionFee = tuitionFee;
+    }
+
+    public double getTuitionFee() {
+        return tuitionFee;
+    }
+
     public Student(String ID, String name, int age) {
         super(ID, name, age);
         this.enrolledSections = new ArrayList<>();
@@ -36,4 +46,6 @@ public class Student extends Person {
     public void displayName() {
         System.out.println("Student Name: " + super.getName());
     }
+
+
 }

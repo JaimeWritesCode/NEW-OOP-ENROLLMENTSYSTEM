@@ -1,5 +1,5 @@
 package org.example.service;
-
+import org.example.model.PaymentValidation;
 import org.example.model.Student;
 import java.util.HashMap;
 import java.util.Map;
@@ -23,5 +23,11 @@ public class TuitionServiceImpl implements ITuitionService {
     @Override
     public double getRemainingBalance(Student student) {
         return studentBalances.getOrDefault(student.getStudentId(), calculateFee(student));
+    }
+
+    public void validatePayment(Student s) throws PaymentValidation {
+        if (s.getTuitionFee() > 5000.0) {
+            throw new PaymentValidation("Rejection: Outstanding balance is $" + s.getTuitionFee());
+        }
     }
 }

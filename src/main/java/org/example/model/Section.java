@@ -10,7 +10,6 @@ public class Section {
     private Instructor assignedInstructor;
     private List<Student> enrolledStudents;
 
-    // Option: Fixed capacity of 25
     public Section(String sectionId, String sectionName) {
         this.sectionId = sectionId;
         this.sectionName = sectionName;
@@ -18,7 +17,6 @@ public class Section {
         this.enrolledStudents = new ArrayList<>();
     }
 
-    // Keep the old constructor too, just in case one special section needs more!
     public Section(String sectionId, String sectionName, int maxCapacity) {
         this.sectionId = sectionId;
         this.sectionName = sectionName;
