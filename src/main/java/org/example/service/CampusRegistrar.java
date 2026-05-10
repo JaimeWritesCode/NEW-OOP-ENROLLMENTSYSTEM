@@ -44,6 +44,7 @@ public class CampusRegistrar {
     }
 
     public void showUniversityStructure(String deptId) {
+
         departmentService.viewDepartmentHierarchy(deptId);
     }
 

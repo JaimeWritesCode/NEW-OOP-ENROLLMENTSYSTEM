@@ -11,14 +11,17 @@ public class TuitionFeePayment {
 
 
     public double getBalance() {
+
         return balance;
     }
 
     public void setBalance(double balance) {
+
         this.balance = balance;
     }
 
     public String getStudentId() {
+
         return studentId;
     }
 }

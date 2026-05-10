@@ -3,7 +3,6 @@ import org.example.model.Department;
 import java.util.ArrayList;
 import java.util.List;
 
-// Ensure this matches the variable name in Main
 public class DepartmentServiceImpl extends DepartmentRegistrationService {
 
     public DepartmentServiceImpl() {
@@ -24,10 +23,10 @@ public class DepartmentServiceImpl extends DepartmentRegistrationService {
     public void viewDepartmentHierarchy(String departmentId) {
         for (Department dept : departments) {
             if (dept.getDepartmentId().equals(departmentId)) {
-                System.out.println("🏢 Department: " + dept.getDepartmentName());
+                System.out.println(" Department: " + dept.getDepartmentName());
                 return;
             }
         }
-        System.out.println("❌ Department not found.");
+        System.out.println(" Department not found.");
     }
 }

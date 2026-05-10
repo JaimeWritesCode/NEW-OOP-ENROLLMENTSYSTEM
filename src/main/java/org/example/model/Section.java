@@ -43,4 +43,8 @@ public class Section {
         return assignedInstructor;
     }
 
+    public String getSectionId() {
+        return sectionId;
+    }
+
 }
