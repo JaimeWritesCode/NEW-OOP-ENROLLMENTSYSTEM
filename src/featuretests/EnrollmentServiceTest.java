@@ -1,10 +1,8 @@
-package org.example;
-
 import org.example.model.*;
 import org.example.service.*;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
-import java.util.ArrayList;
+
 
 public class EnrollmentServiceTest {
 
