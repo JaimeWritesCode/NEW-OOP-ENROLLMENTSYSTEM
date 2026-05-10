@@ -7,10 +7,12 @@ public class Department {
     private String id;
     private String departmentName;
     private List<Section> sections;
+    private List<Instructor> instructors;
 
-    public Department(String id, String departmentName) {
+    public Department(String id, String departmentName, List<Instructor> instructors) {
         this.id = id;
         this.departmentName = departmentName;
+        this.instructors = instructors;
         this.sections = new ArrayList<>();
     }
 
@@ -18,11 +20,19 @@ public class Department {
         return id;
     }
 
+    public String getDepartmentName() {
+        return departmentName;
+    }
+
+    public String getDepartmentId() {
+        return id;
+    }
+
     public List<Section> getSections() {
         return sections;
     }
 
-    public String getDepartmentName() {
-        return departmentName;
+    public void addSection(Section section) {
+        this.sections.add(section);
     }
 }

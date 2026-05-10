@@ -4,26 +4,26 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Section {
-    private String sectionID;
+    private String sectionId;
     private String sectionName;
-    private int maxCapacity; // For Validation
-
-    private Instructor instructor;
+    private int maxCapacity;
+    private Instructor assignedInstructor;
     private List<Student> enrolledStudents;
 
-    public Section(String sectionID, String sectionName, int maxCapacity) {
-        this.sectionID = sectionID;
+    // Option: Fixed capacity of 25
+    public Section(String sectionId, String sectionName) {
+        this.sectionId = sectionId;
         this.sectionName = sectionName;
-        this.maxCapacity = maxCapacity;
+        this.maxCapacity = 25; // Set to 25 by default
         this.enrolledStudents = new ArrayList<>();
     }
 
-    public String getSectionID() {
-        return sectionID;
-    }
-
-    public String getSectionName() {
-        return sectionName;
+    // Keep the old constructor too, just in case one special section needs more!
+    public Section(String sectionId, String sectionName, int maxCapacity) {
+        this.sectionId = sectionId;
+        this.sectionName = sectionName;
+        this.maxCapacity = maxCapacity;
+        this.enrolledStudents = new ArrayList<>();
     }
 
     public int getMaxCapacity() {
@@ -33,12 +33,16 @@ public class Section {
     public List<Student> getEnrolledStudents() {
         return enrolledStudents;
     }
-
-    public Instructor getInstructor() {
-        return instructor;
+    public String getSectionName() {
+        return sectionName;
     }
 
-    public void setInstructor(Instructor instructor) {
-        this.instructor = instructor;
+    public void setAssignedInstructor(Instructor instructor) {
+        this.assignedInstructor = instructor;
     }
+
+    public Instructor getAssignedInstructor() {
+        return assignedInstructor;
+    }
+
 }

@@ -1,26 +1,35 @@
-package org.example.service;
+package org.example.service.impl;
 
+import org.example.service.DepartmentRegistrationService;
 import org.example.model.Department;
-import org.example.model.Section;
-import org.example.model.Student;
 import java.util.ArrayList;
 import java.util.List;
 
-public class DepartmentServiceImpl implements IDepartmentService {
-    private List<Department> departments = new ArrayList<>();
+public class DepartmentServiceImpl extends DepartmentRegistrationService {
+
+    public DepartmentServiceImpl() {
+        super();
+    }
 
     @Override
     public void addDepartment(Department dept) {
-        departments.add(dept);
+        this.departments.add(dept);
     }
 
     @Override
     public List<Department> getAllDepartments() {
-        return new ArrayList<>(departments);
+        return new ArrayList<>(this.departments);
     }
 
     @Override
     public void viewDepartmentHierarchy(String departmentId) {
+        for (Department dept : departments) {
+            if (dept.getDepartmentId().equals(departmentId)) {
+                System.out.println("Department: " + dept.getDepartmentName());
 
+                return;
+            }
+        }
+        System.out.println("Department not found.");
     }
 }
