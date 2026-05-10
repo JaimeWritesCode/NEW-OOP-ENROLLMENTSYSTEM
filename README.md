@@ -4,7 +4,7 @@
 
 **Program**: Information Technology
 
-**Branch: departmentbranch**
+**Branch: tuitionbranch**
 
 **OOP Enrollment System**
 
