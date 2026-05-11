@@ -7,7 +7,7 @@ import java.util.ArrayList;
 public class Main {
     public static void main(String[] args) {
 
-        // 1. Initialize Services
+        // Initialize Services
         IStudentService studentService = new IStudentServiceImpl();
         ITuitionService tuitionService = new TuitionServiceImpl();
         IEnrollmentService enrollmentService = new PersonEnrollment();
@@ -18,12 +18,12 @@ public class Main {
                 studentService, instructorService, departmentService, tuitionService, enrollmentService
         );
 
-        // 2. Set up Department & Staff
+        // Set up Department & Staff
         Department cite = new Department("D01", "College of Information Technology and Engineering", new ArrayList<>());
         Instructor prof = new Instructor("P01", "Seb", 45, "Cybersecurity");
         Instructor prof1 = new Instructor("P01", "Abigail", 50, "Cybersecurity");
 
-        // 3. Define Sections
+        // Define Sections
         Section javaSection = new Section("S01", "Security Section", 30);
         javaSection.setAssignedInstructor(prof);
 
@@ -37,7 +37,7 @@ public class Main {
         cite.getSections().add(javaSection);
         cite.getSections().add(smallClassroom);
 
-        // 4. Define Students
+        // Define Students
         Student s1 = new Student("S101", "Leo", 20);
         Student s2 = new Student("S102", "Alex", 21);
         Student s3 = new Student("S103", "Shown", 19);
